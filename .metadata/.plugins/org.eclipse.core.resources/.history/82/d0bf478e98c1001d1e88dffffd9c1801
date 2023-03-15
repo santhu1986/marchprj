@@ -1,0 +1,49 @@
+package com.ebanking.master;
+
+import org.openqa.selenium.Platform;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.Test;
+
+public class SGrid 
+{
+
+	DesiredCapabilities Cap;
+	WebDriver driver;
+	@Test
+	public void Gd() throws InterruptedException
+	{
+	 Cap=new DesiredCapabilities();
+	 Cap.setBrowserName("firefox");
+	 Cap.setPlatform(Platform.WINDOWS);
+	 
+	    driver.manage().window().maximize();
+		driver.get("http://103.211.39.246/ranford2");
+		
+		//Login
+		
+		RanfordHP RHP=PageFactory.initElements(driver,RanfordHP.class);
+		RHP.Login();
+		
+		AdminHP AHP=PageFactory.initElements(driver,AdminHP.class);
+		AHP.Rol();
+		
+		//New Role
+		
+		RoleDetails RD=PageFactory.initElements(driver,RoleDetails.class);
+		RD.Nrole();
+		Thread.sleep(3000);
+		//Role Creation
+		
+		RoleCreation Rc=PageFactory.initElements(driver,RoleCreation.class);
+		Rc.Rcreation("Tellerghg","E");
+		Thread.sleep(3000);
+		//Alert
+		
+		driver.switchTo().alert().accept();
+		
+	
+	}
+	
+}

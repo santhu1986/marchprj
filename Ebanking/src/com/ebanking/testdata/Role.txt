@@ -1,0 +1,4 @@
+RoleName###RoleType###Results
+ClerkCanaraBnk###E
+CashierCanaraBnk###E
+PoCanaraBnk###E

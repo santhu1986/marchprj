@@ -1,0 +1,4 @@
+RoleName###RoleType###Results
+ClerkCanaraBnk###E$$&$#New Role with id 2594 Created Sucessfully
+CashierCanaraBnk###E$$&$#New Role with id 2595 Created Sucessfully
+PoCanaraBnk###E$$&$#New Role with id 2596 Created Sucessfully
